@@ -6,7 +6,7 @@ export default function Page() {
   const data = useData<Data>();
   return (
     <>
-      <h1>To-do List</h1>
+      <h1>To-do</h1>
       <TodoList initialTodoItems={data.todo} />
     </>
   );
