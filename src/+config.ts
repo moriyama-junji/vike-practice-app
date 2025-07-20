@@ -15,3 +15,4 @@ export default {
 
   extends: vikeReact,
 } satisfies Config;
+

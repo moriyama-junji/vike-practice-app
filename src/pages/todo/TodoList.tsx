@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "../../components/button";
 
 export function TodoList({ initialTodoItems }: { initialTodoItems: { text: string }[] }) {
   const [todoItems, setTodoItems] = useState(initialTodoItems);
@@ -22,6 +23,7 @@ export function TodoList({ initialTodoItems }: { initialTodoItems: { text: strin
         >
           <input type="text" onChange={(ev) => setNewTodo(ev.target.value)} value={newTodo} />
           <button type="submit">Add to-do</button>
+          <Button>増やす</Button>
         </form>
       </div>
     </>

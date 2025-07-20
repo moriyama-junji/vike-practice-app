@@ -1,20 +1,23 @@
 import "./style.css";
+import "../src/styles/reset.css";
 
 import logoUrl from "../assets/logo.svg";
-import { Link } from "../components/Link.js";
+import { Link } from "../src/components/Link.js";
+
 
 export default function LayoutDefault({ children }: { children: React.ReactNode }) {
   return (
     <div
-      style={{
-        display: "flex",
-        maxWidth: 900,
-        margin: "auto",
-      }}
+      // style={{
+      //   display: "flex",
+      //   maxWidth: 900,
+      //   margin: "auto",
+      // }}
     >
       <Sidebar>
         <Logo />
-        <Link href="/">Welcome</Link>
+        {/* <Link href="/">Welcome</Link> */}
+        <Link href="/count">count</Link>
         <Link href="/todo">Todo</Link>
         <Link href="/star-wars">Data Fetching</Link>
       </Sidebar>
