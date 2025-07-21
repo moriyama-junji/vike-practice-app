@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { TodoContext } from "../context/TodoContext";
 import styles from "./styles.module.scss";
+import { deleteDoc, doc } from "firebase/firestore";
+import db from "../../../lib/firebase";
 
 
 export const List = () => {
@@ -23,12 +25,13 @@ export const List = () => {
               {/* 該当のitemのみ削除 */}
               <button
                 className={styles.button}
-                onClick={() => {
+                onClick={async() => {
                   setTodoItems((prev) =>
                     prev.map((todo, i) =>
                       i === index ? { ...todo, completed: true } : todo
                     )
                   );
+                  await deleteDoc(doc(db, "todo", item.id))
                 }}
               >
                 完了

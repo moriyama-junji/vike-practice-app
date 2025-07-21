@@ -7,6 +7,7 @@ import { collection, getDocs } from "firebase/firestore";
 
 // todoリストの型
 type TodoProps = {
+  id: string;
   content: string;
   completed: boolean;
 };
