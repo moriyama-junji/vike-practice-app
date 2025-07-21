@@ -17,14 +17,20 @@
     padding: 4px;
     background-color: #fff;
     border-radius: 5px;
-    cursor: pointer;
+    transition: .3s;
+    pointer-events: none;
+    
+    &.isActive {
+      background-color: #3670ef;
+      color: #fff;
+      cursor: pointer;
+      pointer-events: auto;
+  }
 
     &:hover {
       transition: .3s;
       opacity: 0.7;
     }
   }
-
-
 }
 

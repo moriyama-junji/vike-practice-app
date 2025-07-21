@@ -24,6 +24,7 @@ export const List = () => {
             <li className={styles.list} key={index}>
               <input
               type="checkbox"
+              checked={item.completed}
               className={styles.check}
               onChange={(e) => {
                 const newComleted = e.target.checked
@@ -56,9 +57,3 @@ export const List = () => {
     </>
   );
 };
-
-//  setTodoItems(prev =>
-//               prev.map((todo, i) =>
-//                 i === index ? { ...todo, completed: true } : todo
-//               )
-//             );

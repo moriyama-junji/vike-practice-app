@@ -37,10 +37,3 @@ export const TodoProvider = ({ children }: { children: React.ReactNode }) => {
     </TodoContext.Provider>
   );
 };
-
-// const addItems = ({content, completed}: TodoProps) => {
-//   setTodoItems(prev => [
-//     ...prev,
-//     {content, completed}
-//   ])
-// }
