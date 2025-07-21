@@ -1,8 +1,7 @@
 import React, { useContext, useState } from "react";
 import { TodoContext } from "../context/TodoContext";
 import styles from "./styles.module.scss";
-// firestore
-import db from "../../../lib/firebase"
+
 
 export const List = () => {
   // context
@@ -14,6 +13,7 @@ export const List = () => {
 
 
   return (
+    <>
     <ul>
       {todoItems.map(
         (item, index) =>
@@ -37,6 +37,10 @@ export const List = () => {
           )
       )}
     </ul>
+    <ul>
+
+    </ul>
+    </>
   );
 };
 

@@ -2,13 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBDHiHfC9NWFEXSqLeVx3FSqxbW6TUhz3A",
-  authDomain: "my-app-vike.firebaseapp.com",
-  projectId: "my-app-vike",
-  storageBucket: "my-app-vike.firebasestorage.app",
-  messagingSenderId: "696139091108",
-  appId: "1:696139091108:web:5d97197afcefc71ba62a31",
-  measurementId: "G-2E9SVZHTKD"
+  apiKey: import.meta.env.VIKE_PUBLIC_FIRESTORE_API_KEY,
+  authDomain: import.meta.env.VIKE_PUBLIC_FIRESTORE_AUTH_DOMAIN,
+  projectId: import.meta.env.VIKE_PUBLIC_FIRESTORE_PROJECT_ID,
+  storageBucket: import.meta.env.VIKE_PUBLIC_FIRESTORE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VIKE_PUBLIC_FIRESTORE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VIKE_PUBLIC_FIRESTORE_APP_ID,
 };
 
 // Initialize Firebase
