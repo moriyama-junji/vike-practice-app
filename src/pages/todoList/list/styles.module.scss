@@ -4,6 +4,11 @@
   gap: 20px;
   font-size: 24px;
 
+  .check {
+    width: 24px;
+    height: 24px;
+  }
+
   .button {
     display: grid;
     place-items: center;

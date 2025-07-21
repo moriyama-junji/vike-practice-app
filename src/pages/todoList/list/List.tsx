@@ -12,6 +12,7 @@ export const List = () => {
   if (!context) return null;
   const { todoItems, setTodoItems } = context;
 
+  const [ checked, setChecked  ] = useState(false)
 
 
   return (
@@ -19,11 +20,20 @@ export const List = () => {
     <ul>
       {todoItems.map(
         (item, index) =>
-          !item.completed && (
+          // !item.completed && (
             <li className={styles.list} key={index}>
+              <input
+              type="checkbox"
+              className={styles.check}
+              onChange={(e) => {
+                const newComleted = e.target.checked
+                setTodoItems(prev => prev.map((todo, i) =>
+                i === index ? {...todo, completed:newComleted} : todo))
+              }}
+              />
               <p>{item.content}</p>
               {/* 該当のitemのみ削除 */}
-              <button
+              {/* <button
                 className={styles.button}
                 onClick={async() => {
                   setTodoItems((prev) =>
@@ -35,9 +45,9 @@ export const List = () => {
                 }}
               >
                 完了
-              </button>
+              </button> */}
             </li>
-          )
+          // )
       )}
     </ul>
     <ul>
