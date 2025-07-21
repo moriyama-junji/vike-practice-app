@@ -13,8 +13,8 @@ export default function Page() {
       <p className={styles.count}>{count}</p>
       <div className={styles.buttons}>
       <Decrement count={count} setCount={setCount} />
-      <Increment count={count} setCount={setCount} />
       <Initialize count={count} setCount={setCount} />
+      <Increment count={count} setCount={setCount} />
       </div>
     </div>
   );
