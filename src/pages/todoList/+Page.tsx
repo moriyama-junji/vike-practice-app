@@ -1,7 +1,7 @@
 
 import { TodoProvider } from "./context/TodoContext";
 import { List } from "./list/List";
-import styles from "./styles.module.scss";
+import * as css from "./styles.module.scss";
 import { DeleteBtn } from "./components/deleteBtn/DeleteBtn";
 import TodoInput from "./components/input/TodoInput";
 
@@ -9,7 +9,7 @@ const TodoList = () => {
 
   return (
     <TodoProvider>
-      <h1 className={styles.todo_main}>TODO LIST</h1>
+      <h1 className={css.todoMain}>TODO LIST</h1>
       <TodoInput />
       <List />
       <DeleteBtn />

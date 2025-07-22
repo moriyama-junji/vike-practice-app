@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { createContext } from "react";
 
-// firestore
+// fireStore
 import db from "../../../lib/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
@@ -23,10 +23,11 @@ export const TodoProvider = ({ children }: { children: React.ReactNode }) => {
   const [todoItems, setTodoItems] = useState<TodoProps[]>([]);
 
   useEffect(() => {
-    // deta取得
+    // data取得
     const todoData = collection(db, "todo");
     getDocs(todoData).then((snapshot) => {
       const todos = snapshot.docs.map((doc) => doc.data() as TodoProps);
+      // contextに反映
       setTodoItems(todos);
     });
   }, []);

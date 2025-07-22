@@ -2,10 +2,15 @@
   "scripts": {
     "dev": "vike dev",
     "build": "vike build",
-    "preview": "vike preview"
+    "preview": "vike preview",
+    "css:typed": "tcm -e -p 'src/**/*.module.scss'",
+		"css:typed:clean": "find src -name '*.module.scss.d.ts' -type f -delete && find src -type d -empty -delete",
+		"css:typed:watch": "tcm -w -e -p 'src/**/*.module.scss'"
   },
   "dependencies": {
+    "@aspida/fetch": "^1.14.0",
     "@vitejs/plugin-react": "^4.6.0",
+    "aspida": "^1.14.0",
     "firebase": "^12.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -16,6 +21,7 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "sass": "^1.89.2",
+    "typed-css-modules": "^0.9.1",
     "typescript": "^5.8.3",
     "vite": "^6.3.5"
   },

@@ -1,9 +1,6 @@
 import React, { useContext, useState } from "react";
 import { TodoContext } from "../context/TodoContext";
-import styles from "./styles.module.scss";
-import { deleteDoc, doc } from "firebase/firestore";
-import db from "../../../lib/firebase";
-
+import * as css from "./styles.module.scss";
 
 export const List = () => {
   // context
@@ -12,7 +9,7 @@ export const List = () => {
   if (!context) return null;
   const { todoItems, setTodoItems } = context;
 
-  const [ checked, setChecked  ] = useState(false)
+  // const [ checked, setChecked  ] = useState(false)
 
 
   return (
@@ -21,15 +18,15 @@ export const List = () => {
       {todoItems.map(
         (item, index) =>
           // !item.completed && (
-            <li className={styles.list} key={index}>
+            <li className={css.list} key={index}>
               <input
               type="checkbox"
               checked={item.completed}
-              className={styles.check}
+              className={css.check}
               onChange={(e) => {
-                const newComleted = e.target.checked
+                const newCompleted = e.target.checked
                 setTodoItems(prev => prev.map((todo, i) =>
-                i === index ? {...todo, completed:newComleted} : todo))
+                i === index ? {...todo, completed:newCompleted} : todo))
               }}
               />
               <p>{item.content}</p>

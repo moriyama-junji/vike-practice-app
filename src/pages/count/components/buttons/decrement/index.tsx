@@ -1,16 +1,16 @@
 import React, { Dispatch, SetStateAction } from 'react'
-import styles from './styles.module.scss'
+import * as css from './styles.module.scss'
 
 type Props = {
-  count: number
+  // count: number
   setCount: Dispatch<SetStateAction<number>>
 }
 
-export const Decrement = ({ count, setCount } : Props) => {
+export const Decrement = ({ setCount } : Props) => {
 
   return (
     <button
-    className={styles.button}
+    className={css.button}
     onClick={() => setCount(prev => prev - 1)}
     >MINUS</button>
   )

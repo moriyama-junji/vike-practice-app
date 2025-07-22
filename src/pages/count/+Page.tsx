@@ -1,20 +1,20 @@
 import { useState } from "react";
-import { Decrement } from "./components/button/decrement";
-import styles from "./styles.module.scss";
-import { Increment } from "./components/button/increment";
-import { Initialize } from "./components/button/initialize";
+import { Increment } from "./components/buttons/increment";
+import { Decrement } from "./components/buttons/decrement";
+import { Initialize } from "./components/buttons/initialize";
+import * as css from "./styles.module.scss";
 
 export default function Page() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className={styles.main}>
-      <h1 className={styles.counter_main}>COUNTER</h1>
-      <p className={styles.count}>{count}</p>
-      <div className={styles.buttons}>
-      <Decrement count={count} setCount={setCount} />
-      <Initialize count={count} setCount={setCount} />
-      <Increment count={count} setCount={setCount} />
+    <div className={css.main}>
+      <h1>COUNTER</h1>
+      <p className={css.count}>{count}</p>
+      <div className={css.buttons}>
+      <Decrement  setCount={setCount} />
+      <Initialize  setCount={setCount} />
+      <Increment  setCount={setCount} />
       </div>
     </div>
   );
