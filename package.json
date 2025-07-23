@@ -5,7 +5,8 @@
     "preview": "vike preview",
     "css:typed": "tcm -e -p 'src/**/*.module.scss'",
 		"css:typed:clean": "find src -name '*.module.scss.d.ts' -type f -delete && find src -type d -empty -delete",
-		"css:typed:watch": "tcm -w -e -p 'src/**/*.module.scss'"
+		"css:typed:watch": "tcm -w -e -p 'src/**/*.module.scss'",
+     "api:build": "aspida"
   },
   "dependencies": {
     "@aspida/fetch": "^1.14.0",

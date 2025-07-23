@@ -1,9 +1,10 @@
-@use "functions";
+// @use "functions";
 
 .button {
   width: 60px;
   height: 40px;
-  padding: func.rem(4);
+  // padding: func.rem(4);
+  padding: 4px;
   border-radius: 5px;
   background-color: #b3b3b3;
   cursor: pointer;

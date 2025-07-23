@@ -17,10 +17,23 @@ export default defineConfig({
 
   css: {
 		preprocessorOptions: {
-			scss: {
-				includePaths: [path.join(__dirname, "src/styles")],
-				additionalData: `@use "#/styles/variables.scss" as *;`,
-			},
+			// scss: {
+			// 	includePaths: [path.join(__dirname, "src/styles")],
+			// 	// プロジェクト内のすべてのSass（SCSS）ファイルの先頭に、指定された @use ルールを自動的に挿入する
+			// 	additionalData: `@use "#/src/styles/variables.scss" as *;`,
+				
+				
+			// 	// additionalData: `@use "./src/styles/variables.scss" as *;`,
+			// },
 		},
 	},
 });
+
+// css: {
+// 		preprocessorOptions: {
+// 			scss: {
+// 				includePaths: [path.join(__dirname, "src/styles")],
+// 				additionalData: `@use "#/styles/variables.scss" as *;`,
+// 			},
+// 		},
+// 	},
