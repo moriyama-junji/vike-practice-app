@@ -1,18 +1,30 @@
-// import apiClient from '../../client';
+import type { DefineMethods } from "aspida";
 
-// export const getPosts = async () => {
-// 	const response = await apiClient.posts._id(id).$get();
-// 	// const response = await apiClient.posts._id(id).$get(query: {post:});
+export type Post = {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
 
-//     const data = await response.json();
+export type Methods = DefineMethods<{
+  get: {
+    resBody: Post[];
+  }
+}>;
 
-// 	return data;
-// };
+// DefineMethodsはAPIのリクエストやレスポンスをの形をあらかじめ決めておくための型定義
 
-// export const getPosts = async () => {
-// 	const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+//=========================================================
+// import type { DefineMethods } from "aspida";
 
-//     const data = await response.json();
-
-// 	return data;
-// };
+// export type Methods = DefineMethods<{
+//   get: {
+//     resBody: {
+//       userId: number;
+//       id: number;
+//       title: string;
+//       body: string;
+//     };
+//   };
+// }>;

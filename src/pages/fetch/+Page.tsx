@@ -1,41 +1,24 @@
 
-// import { getPosts } from 'api/rest/posts';
-// import React, { useState, useEffect } from 'react';
 
-// type PostData = {
-//   userId: number;
-//   id: number;
-//   title: string;
-//   body: string;
-// }
+import { getPosts } from '../../../api/client';
+import { Post } from 'api/rest/posts';
+import React, { useState, useEffect } from 'react';
 
-// const Fetch = () => {
-//   // post
-//   const [post, setPost] = useState<PostData | null>(null); 
+const Fetch = () => {
+  useEffect(() => {
+    getPosts();
+  }, []); 
 
-//   useEffect(() => {
-//     // コンポーネントがマウントされたときにfetchを実行
-//     const fetchPost = async () => {
-//       // fetchPost()
-//       const fetchedPostData = await getPosts();
-//       setPost(fetchedPostData); 
-//     };
-//     fetchPost()
-//   }, []); 
+  return (
+    <div>
+      <p>fetch</p>
+      {/* <h1>{post.title}</h1>
+      <p>{post.body}</p> */}
+    </div>
+  );
+};
 
-//   if (!post) {
-//     return <div>Loading...</div>; 
-//   }
-
-//   return (
-//     <div>
-//       <h1>{post.title}</h1>
-//       <p>{post.body}</p>
-//     </div>
-//   );
-// };
-
-// export default Fetch;
+export default Fetch;
 
 
 

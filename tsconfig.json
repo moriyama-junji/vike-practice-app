@@ -23,7 +23,8 @@
     "jsxImportSource": "react",
     "baseUrl": "./",
 		"paths": {
-			"#/*": ["src/*"]
+			"#/*": ["src/*"],
+			"@/*": ["src/*"]
 		},
   },
   "exclude": [
